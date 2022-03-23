@@ -1,6 +1,7 @@
 const feed=document.getElementById("feed");
 const btn=document.getElementsByTagName("button");
 function fetchCountries() {
+  console.log("clicked");
   fetch("https://restcountries.com/v3.1/all")
     .then((Response) => {
       return Response.json();
