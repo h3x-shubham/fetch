@@ -1,5 +1,5 @@
 const feed=document.getElementById("feed");
-
+const btn=document.getElementsByTagName("button");
 function fetchCountries() {
   fetch("https://restcountries.com/v3.1/all")
     .then((Response) => {
@@ -14,3 +14,7 @@ function fetchCountries() {
       });
     });
 }
+
+btn[0].addEventListener("click",()=>{
+  fetchCountries();
+});
